@@ -15,10 +15,15 @@ namespace BenchmarkDotNetTest
     {
         public List<string> TestTexts { get; set; } = new List<string>()
         {
-            "",
             "the shortest English sentence containing 26 letters",
             string.Join("\n", Enumerable.Repeat("the shortest English sentence containing 26 letters",10))
         };
+
+        /// <summary>
+        /// 使用每个测试数据进行一次基准测试
+        /// </summary>
+        [Params(1, 100)]
+        public int Count { get; set; }
 
         // 使用参数源中的每个测试数据进行一次基准测试
         [ParamsSource(nameof(TestTexts))]

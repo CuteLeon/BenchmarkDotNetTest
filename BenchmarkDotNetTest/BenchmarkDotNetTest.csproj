@@ -9,4 +9,8 @@
     <PackageReference Include="BenchmarkDotNet" Version="0.11.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BenchmarkDotNetTarget\BenchmarkDotNetTarget.csproj" />
+  </ItemGroup>
+
 </Project>
